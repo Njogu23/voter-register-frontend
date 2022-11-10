@@ -2,8 +2,6 @@ import React from 'react';
 
 
 const StationSelection = ({ stationData, handleChange, stnID }) =>{
-
-    console.log(stationData)
     
     const stations = stationData.map((pst) => {
        

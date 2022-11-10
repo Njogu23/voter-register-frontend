@@ -39,37 +39,148 @@
       "DOB": "2022-11-19",
       "id_number": "25526790",
       "id": 4
+
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 5
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "3",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 6
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 7
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 8
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 9
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 10
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 11
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 12
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 13
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 14
     }
   ],
   "polling_stations": [
     {
       "id": 1,
-      "name": "Pollong Station A",
+      "name": "Polling Station A",
       "ward_id": ""
     },
     {
       "id": 2,
-      "name": "Pollong Station B",
+      "name": "Polling Station B",
       "ward_id": ""
     },
     {
       "id": 3,
-      "name": "Pollong Station C",
+      "name": "Polling Station C",
       "ward_id": ""
     },
     {
       "id": 4,
-      "name": "Pollong Station D",
+      "name": "Polling Station D",
       "ward_id": ""
     },
     {
       "id": 5,
-      "name": "Pollong Station E",
+      "name": "Polling Station E",
       "ward_id": ""
     },
     {
       "id": 6,
-      "name": "Pollong Station F",
+      "name": "Polling Station F",
       "ward_id": ""
     }
   ]

@@ -2,10 +2,10 @@ body{
     background-image: url(./images/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg);
 }
 .pollcount{
-    margin-left: 470px;
+    margin-left: 400px;
     margin-top: 25px;
     height: 30px;
-    margin-right: 250px;
+    margin-right: 200px;
     /* display: inline-block;   */
   
 
@@ -14,9 +14,9 @@ body{
     margin-top: 100px;
     height: 50px;
     padding: 20px;
-    width: 400px;
-    background-color: aquamarine;
-    margin-right: 10px;
+    width: 250px;
+    background-color: rgb(173, 236, 236);
+    margin-right: 200px;
     cursor: pointer;
     border-radius: 20px 0 0 20px; 
 
@@ -25,11 +25,14 @@ body{
     margin-top: 150px;
     height: 50px;
     padding: 20px;
-    width: 400px;
-    background-color: aquamarine;
+    width: 250px;
+    background-color: rgb(173, 236, 236);
     margin-right: 10px;
     cursor: pointer;
     border-radius: 0 20px 20px 0; 
 
 
+}
+.vote:hover, .poll:hover{
+    color: black;
 }

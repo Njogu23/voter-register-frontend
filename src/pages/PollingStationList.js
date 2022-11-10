@@ -1,22 +1,10 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
 import SearchBar from "../components/SearchBar";
 
-const PollingStationsList = ({stationData}) => {
+const PollingStationsList = ({stationData, votersList, voter, handleSearch}) => {
     const [target, setTarget] = useState("")
-    const [votersList, setVotersList] = useState([])
-
-    useEffect(()=>{
-        fetch("http://localhost:9292/voters")
-          .then((r) => r.json())
-          .then((d) => setVotersList(d));
-    },[])
 
     const filterByPollingStn = votersList.filter(voter => voter.polling_station_id === target)
-
-    const deleteVoter = (id) =>{
-        const newVotersList = votersList.filter(voter => voter.id !== id)
-        setVotersList(newVotersList)
-    }
 
     const voterInPollingStn = filterByPollingStn.map((voter, index)=>{
         return(
@@ -83,7 +71,7 @@ const PollingStationsList = ({stationData}) => {
 
     return(
         <section  style={{display:"flex", flexDirection:"column", background:"purple"}}>
-            <SearchBar votersList={votersList} stationData={stationData} deleteVoter={deleteVoter}/>
+            <SearchBar voter={voter} handleSearch={handleSearch}/>
             {stationList}
         </section>
         

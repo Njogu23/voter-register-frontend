@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import StationSelection from "./StationSelection";
 import "../home.css";
 
 const EditDetails = ({ stationData, voterInfo }) => {
-    const {id} = voterInfo;
-    console.log(voterInfo);
+    
   const [record, setRecord] = useState(voterInfo);
+  console.log(record);
+
+  const { id_number } = record;
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -15,9 +18,12 @@ const EditDetails = ({ stationData, voterInfo }) => {
     });
   };
 
+  //function to handle redirect
+    const history = useHistory();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:9292/voters/${id}`, {
+    fetch(`http://localhost:9292/voters/${id_number}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -111,7 +117,7 @@ const EditDetails = ({ stationData, voterInfo }) => {
           handleChange={handleChange}
         />
         <div>
-          <button className="regButton" type="submit">
+          <button className="regButton" onClick={history.push("/voters")} type="submit">
             Update Details
           </button>
         </div>
