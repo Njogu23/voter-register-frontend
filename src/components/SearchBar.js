@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import EditDetails from "./EditDetails";
+import { Link } from "react-router-dom";
 
-const SearchBar = ({votersList, stationData, deleteVoter}) =>{
+const SearchBar = ({votersList, deleteVoter}) =>{
     const [search, setSearch] = useState("");
-    const [voterInfo, setVoterInfo] = useState("");
 
 
     const searchFilter = votersList.filter(voter => {
@@ -14,14 +13,11 @@ const SearchBar = ({votersList, stationData, deleteVoter}) =>{
         }
     })
 
-    const handleEdit = () => {
-        setVoterInfo(searchFilter);
-        return <EditDetails voterInfo={voterInfo} stationData={stationData} />;
-    }
+    
 
     const handleDelete = (e) =>{
         console.log(e.target.value)
-        fetch(`http://localhost:9292/voters/${e.target.value}`, {
+        fetch(`http://localhost:3000/voters/${e.target.value}`, {
             method: "DELETE"
         })
 
@@ -49,7 +45,7 @@ const SearchBar = ({votersList, stationData, deleteVoter}) =>{
             <h4>ID Number : {voter.id_number}</h4>
             <h4>Polling Station : {voter.polling_station_id}</h4>
             <div>
-              <button onClick={handleEdit} value={voter.id}>Edit Details</button>
+              <Link to="/edit"><button value={voter.id}>Edit Details</button></Link>
               <button onClick={handleDelete} value={voter.id}>
                 delete
               </button>
