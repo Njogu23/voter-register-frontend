@@ -1,12 +1,10 @@
 import React,{ useState, useEffect} from "react";
-import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link} from "react-router-dom";
 import AddVoter from "./pages/AddVoter";
 import NavBar from "./pages/NavBar";
 import PollingStationsList from "./pages/PollingStationList";
 import EditDetails from './components/EditDetails';
 import Home from "./pages/Home";
-import EditDetails from "./components/EditDetails";
-import { Link } from "react-router-dom";
 import './form.css';
 import './home.css';
 import "./nav.css"
