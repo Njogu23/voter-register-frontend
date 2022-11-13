@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import StationSelection from "./StationSelection";
 import "../home.css";
 
-const EditDetails = ({ stationData, voterInfo }) => {
+const EditDetails = ({ stationData,  voterInfo}) => {
     
   const [record, setRecord] = useState(voterInfo);
-  console.log(record);
 
   const { id_number } = record;
+  console.log(id_number);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -17,9 +17,6 @@ const EditDetails = ({ stationData, voterInfo }) => {
       [e.target.name]: e.target.value,
     });
   };
-
-  //function to handle redirect
-    const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,67 +27,69 @@ const EditDetails = ({ stationData, voterInfo }) => {
       },
       body: JSON.stringify(record),
     });
+    console.log(record);
 
   };
   return (
     <div className="form-box">
+      <h3>Edit Details</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name</label>
-          <br />
           <input
             type="text"
             placeholder="first name..."
             name="first_name"
             value={record.first_name}
             onChange={handleChange}
+            style={{ marginBottom: "20px" }}
           ></input>
         </div>
         <div>
           <label>Middle Name</label>
-          <br />
           <input
             type="text"
             placeholder="middle name..."
             name="middle_name"
             value={record.middle_name}
             onChange={handleChange}
+            style={{ marginBottom: "20px" }}
           ></input>
         </div>
         <div>
           <label>Last Name</label>
-          <br />
           <input
             type="text"
             placeholder="last name..."
             name="last_name"
             value={record.last_name}
             onChange={handleChange}
+            style={{ marginBottom: "20px" }}
           ></input>
         </div>
         <div>
           <label>ID Number</label>
-          <br />
           <input
             type="text"
             placeholder="Enter ID..."
             name="id_number"
             value={record.id_number}
             onChange={handleChange}
+            style={{ marginBottom: "20px" }}
           ></input>
         </div>
         <div>
           <label>D.O.B</label>
-          <br />
           <input
             type="date"
-            min="01/11/2004"
+            max="2004-01-01"
             name="DOB"
             value={record.DOB}
             onChange={handleChange}
+            style={{ marginBottom: "20px" }}
           ></input>
         </div>
-        <div>
+        {/* <div>
           <label>Age</label>
           <br />
           <input
@@ -100,11 +99,21 @@ const EditDetails = ({ stationData, voterInfo }) => {
             value={record.age}
             onChange={handleChange}
           ></input>
-        </div>
+        </div> */}
         <div>
           <label>Gender</label>
-          <br />
-          <select name="gender" value={record.gender} onChange={handleChange}>
+          <select
+            name="gender"
+            value={record.gender}
+            onChange={handleChange}
+            style={{
+              marginBottom: "20px",
+              width: "350px",
+              height: "40px",
+              borderRadius: "5px",
+              border: "solid"
+            }}
+          >
             <option>-select-</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -117,9 +126,19 @@ const EditDetails = ({ stationData, voterInfo }) => {
           handleChange={handleChange}
         />
         <div>
-          <button className="regButton" onClick={history.push("/voters")} type="submit">
-            Update Details
+          <button
+            className="regButton"
+            type="submit"
+            style={{ margin: "40px" }}
+            onClick={() => alert("update successful")}
+          >
+            Update
           </button>
+          <Link to="/">
+            <button className="regButton" style={{ margin: "40px" }}>
+              Home
+            </button>
+          </Link>
         </div>
       </form>
     </div>
@@ -127,3 +146,6 @@ const EditDetails = ({ stationData, voterInfo }) => {
 };
 
 export default EditDetails;
+
+// onClick={history.push("/voters")}
+// onClick = { redirectToVoters }; 

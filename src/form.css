@@ -1,13 +1,18 @@
 .form-box{
-    background-color: rgb(173, 236, 236);
+    /* background-color: rgb(173, 236, 236); */
+    /* background-color: #00cc66; */
+    background-color: white;
     position: relative;
     text-align: center;
-width: 500px;
-margin-left: 400px;
-margin-top: 1px;
-height:630px;
+/* width: 600px; */
+max-width: 35vw;
+margin-left: 33vw;
+margin-top: 20px;
+height:900px;
 border-radius: 5px;
 box-shadow: inset;
+
+
 
 }
 .form-box label{
@@ -23,11 +28,12 @@ box-shadow: inset;
     height: auto;
     border-radius: 5px;
     font-weight: bolder;
+
 }
 .form-box input, textarea{
-    width: fit-content;
+    width: 350px;
     border-radius: 5px;
-   height: 30px;
+   height: 40px;
 }
 #input:hover{
     color:black;
@@ -45,14 +51,32 @@ box-shadow: inset;
     height: 35px;
     width: 100px;
     position: center;
-    background-color: white;
+    background-color: #00cc66;
 }
 .poll{
     border-radius: 5px;
+    
+  
+    
 }
 .regButton:hover{
-    color: black;
+    background-color: rgb(180, 9, 169);
 }
 .parta, .partb{
     display: inline-block;
 }
+.register {
+    /* padding-top: 0.25px; */
+    font-style:italic;
+    font-size: x-large;
+}
+.gender {
+    height: 25px;
+    width: 150px;
+}
+/* .first {
+    margin-top: 50px;
+} 
+.station {
+    height: 100px;
+}  */

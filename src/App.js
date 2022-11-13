@@ -5,6 +5,9 @@ import NavBar from "./pages/NavBar";
 import PollingStationsList from "./pages/PollingStationList";
 import EditDetails from './components/EditDetails';
 import Home from "./pages/Home";
+import EditDetails from "./components/EditDetails";
+import Voters from "./components/Voters";
+import { Link } from "react-router-dom";
 import './form.css';
 import './home.css';
 import "./nav.css"
@@ -15,6 +18,7 @@ function App() {
   const [votersList, setVotersList] = useState([]);
   const [search, setSearch] = useState("");
   const [voterInfo, setVoterInfo] = useState("");
+  const [target, setTarget] = useState("");
 
     //fetch all polling stations
     useEffect(()=>{
@@ -59,40 +63,59 @@ function App() {
     const voter = searchFilter.map((voter) => {
       //setVoterInfo(voter);
       return (
-        <div
-          key={voter.id}
-          style={{
-            padding: "2px",
-            border: "solid",
-            borderRadius: "8px",
-            color: "white",
-            background: "grey",
-            margin: "5px",
-          }}
-        >
-          <h2>
-            Name : {voter.first_name} {voter.middle_name} {voter.last_name}
-          </h2>
-          <h4>Date Of Birth : {voter.DOB}</h4>
-          <h4>ID Number : {voter.id_number}</h4>
-          <h4>Polling Station : {voter.polling_station_id}</h4>
-          <div>
-            <Link to="/edit">
-              <button onClick={() => setVoterInfo(voter)} value={voter.id}>
-                Edit Details
-              </button>
-            </Link>
-            <button onClick={handleDelete} value={voter.id}>
-              delete
-            </button>
+          <div
+            key={voter.id}
+            style={{
+              padding: "2px",
+              border: "solid",
+              borderRadius: "8px",
+              color: "white",
+              background: "#556b02",
+              marginTop: "10px",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h2>
+              Name : {voter.first_name} {voter.middle_name} {voter.last_name}
+            </h2>
+            <h4>Date Of Birth : {voter.DOB}</h4>
+            <h4>ID Number : {voter.id_number}</h4>
+            <h4>Polling Station : {voter.polling_station_id}</h4>
+            <div>
+              <Link to="/edit">
+                <button
+                  className="regButton"
+                  onClick={() => setVoterInfo(voter)}
+                  value={voter.id}
+                  style={{ marginRight: "20px" }}
+                >
+                  Edit Details
+                </button>
+              </Link>
+              <Link to="/">
+                <button
+                  className="regButton"
+                  onClick={handleDelete}
+                  value={voter.id}
+                >
+                  delete
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
       );
     });
 
     //sets value of search term
     const handleSearch = (e) => {
       setSearch(e.target.value);
+      console.log(e.target.value)
+    };
+
+    //set value of target polling station
+    const handleVoters = (e) => {
+      setTarget(e.target.value);
     };
 
 
@@ -126,10 +149,14 @@ function App() {
               stationData={stationData}
               voter={voter}
               handleSearch={handleSearch}
+              handleVoters={handleVoters}
             />
           </Route>
           <Route exact path="/edit">
             <EditDetails stationData={stationData} voterInfo={voterInfo}/>
+          </Route>
+          <Route exact path="/voterslist">
+            <Voters target={target}  votersList={votersList} stationData={stationData}/>
           </Route>
           <Route exact path="/">
             <Home stationData={stationData} />

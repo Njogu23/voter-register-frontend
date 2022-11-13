@@ -12,8 +12,8 @@ const StationSelection = ({ stationData, handleChange, stnID }) =>{
 
     return (
         <div>
-            <label>Polling Station</label><br />
-            <select name="polling_station_id" value={stnID} onChange={handleChange}>
+            <label>Polling Station</label>
+            <select style={{ marginBottom: "20px", width: "350px", height: "40px", borderRadius: "5px", border: "solid"}} name="polling_station_id" value={stnID} onChange={handleChange} >
                 {stations}
             </select>
         </div>

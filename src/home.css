@@ -1,16 +1,18 @@
 body{
-    background-image: url(./images/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg);
+    /* background-image: url(./images/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg); */
+    background-color: #66cc00;
 }
 .pollcount{
-    margin-left: 400px;
-    margin-top: 25px;
-    height: 30px;
-    margin-right: 200px;
-    /* display: inline-block;   */
+    justify-content: center;
+     margin-left: 33vw;
+    margin-top: 40px;
+    display: inline-block; 
+    
   
 
 }
 .poll{
+    /* justify-content: center; */
     margin-top: 100px;
     height: 50px;
     padding: 20px;
@@ -19,7 +21,6 @@ body{
     margin-right: 200px;
     cursor: pointer;
     border-radius: 20px 0 0 20px; 
-
 }
 .vote{
     margin-top: 150px;
@@ -36,3 +37,16 @@ body{
 .vote:hover, .poll:hover{
     color: black;
 }
+/* .home {
+    justify-content: center; 
+} */
+.rows {
+    margin-bottom: 100px;
+}
+.heading {
+    font-size: x-large;
+    color: rgb(248, 247, 252);
+}
+/* .gender {
+    font-size: 0px;
+} */
