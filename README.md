@@ -1,3 +1,38 @@
+# Voter Registration Platform
+
+
+## Problem Statement
+Kenyan citizens have always been frustrated by the long queues during elections. An extreme effect of this is low voter turnouts on election days.  
+In an attempt to build a voting system, we saw it right to start with a digital registration platform. This project builds a voter registration platform that will allow digital registration of voters in preparation for general elections.
+
+## Project features
+
+- Display total number of voters per polling station in the home page
+- Allow for voter registration through filling and submitting form
+- Voter can search theie details by ID Number
+- Voter can edit details.
+- Voter can unregister as a voter by deleting details.
+- Display names of registered voters for a polling station when a polling station is clicked.
+- Redirects according to which action has been taken.
+
+## User Stories
+- As a user, I should be able to register as a voter by providing details.    
+- As a user, I should be able to search for my details by ID number.    
+- As a user, I should be able to edit my details upon searching by ID number.    
+- As a user, I should be able to unregister as a voter by deleting my details.   
+- As a user, I should be able to see the voters registered in a polling station by clicking on a polling station.      
+
+## Collaborators
+Evans Ochieng :(Scrum Master)Backend Developer(DB Config, Active Records Migrations)   
+George Njogu :Frontend Developer (ReactJS User Interface)   
+Charity Nelima :Frontend Developer (UX/UI Designer)   
+Leslie Nyatigi :Frontend Developer (UI & UX Designer & API Endpoints - Sinatra)   
+
+
+
+<br />
+<br />   
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
